@@ -1,7 +1,7 @@
 
 # 定义编译器、编译选项、目标文件和源文件
 CC = gcc
-CFLAGS = -Wall -Wextra
+CFLAGS = 
 TARGET = mkfs.cblfs      # 最终可执行文件名
 SRC = mkfs.cblfs.c       # 源文件
 OBJ = $(SRC:.c=.o)       # 自动生成目标文件名（将 .c 替换为 .o）
