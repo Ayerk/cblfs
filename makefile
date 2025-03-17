@@ -14,13 +14,13 @@ build: $(TARGET)
 
 # 仅运行（需确保已编译）
 run:
-	@echo "正在运行程序..."
+	@echo "Executing..."
 	@./$(TARGET)
 
 # 生成可执行文件：依赖 .o 文件
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
-	@echo "编译完成，正在删除中间文件..."
+	@echo "Compiled,deleting object file..."
 	@rm -f $(OBJ)  # 删除所有 .o 文件
 
 # 生成 .o 文件：依赖 .c 文件
