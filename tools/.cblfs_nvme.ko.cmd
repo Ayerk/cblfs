@@ -1,0 +1,1 @@
+savedcmd_/home/ayer/share/fs/cblfs/tools/cblfs_nvme.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/ayer/share/fs/cblfs/tools/cblfs_nvme.ko /home/ayer/share/fs/cblfs/tools/cblfs_nvme.o /home/ayer/share/fs/cblfs/tools/cblfs_nvme.mod.o

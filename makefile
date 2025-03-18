@@ -3,9 +3,9 @@
 CC = gcc
 CFLAGS = 
 TARGET = mkfs.cblfs      # 最终可执行文件名
-SRC = mkfs.cblfs.c       # 源文件
+SRC = tools/mkfs.cblfs.c       # 源文件
 OBJ = $(SRC:.c=.o)       # 自动生成目标文件名（将 .c 替换为 .o）
-
+TARGET_ARGS = /dev/nvme0n1
 # 默认目标：编译并运行
 all: build run
 
@@ -15,7 +15,7 @@ build: $(TARGET)
 # 仅运行（需确保已编译）
 run:
 	@echo "Executing..."
-	@./$(TARGET)
+	@./$(TARGET) $(TARGET_ARGS)
 
 # 生成可执行文件：依赖 .o 文件
 $(TARGET): $(OBJ)

@@ -90,7 +90,7 @@ int oper_nvme(const char *filename){
 
   io.addr = (__u64)buffer;
   io.slba = 1;//逻辑块号 一块为512字节
-  io.nblocks = 15;//覆盖大小 (nblocks+1) * 256
+  io.nblocks = 7;//覆盖大小 (nblocks+1) * 256
   io.opcode = NVME_WRITE;
 
   if(-1==ioctl(fd, NVME_IOCTL_SUBMIT_IO, &io)){//equal to write
@@ -118,8 +118,8 @@ clean:
 
 int main(int argc,char* argv[]){
     if(argc<2){
-        perror("arg");
-        return -1;
+      perror("arg");
+      return -1;
     }
 
     const char *filename = argv[1];
