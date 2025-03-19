@@ -1,3 +1,5 @@
+Linux内核版本6.2 文件读写
+
 ```
 time dd if=/dev/zero of=/dev/nvme0n1 bs=5M count=4096
 ```
